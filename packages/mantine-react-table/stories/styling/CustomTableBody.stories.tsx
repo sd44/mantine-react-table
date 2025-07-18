@@ -3,7 +3,7 @@ import { Text } from '@mantine/core';
 import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 
 const meta: Meta = {
   title: 'Styling/Custom Table Body Examples',

@@ -3,7 +3,7 @@ import { Button, Menu } from '@mantine/core';
 import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 import { IconSend, IconUserCircle } from '@tabler/icons-react';
 
 const meta: Meta = {

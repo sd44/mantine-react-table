@@ -1,18 +1,17 @@
-import { type ReactNode } from 'react';
-
 import {
   createRow as _createRow,
   flexRender as _flexRender,
   type Renderable,
 } from '@tanstack/react-table';
+import type { JSX, ReactNode } from 'react';
 
-import {
-  type MRT_ColumnHelper,
-  type MRT_DisplayColumnDef,
-  type MRT_GroupColumnDef,
-  type MRT_Row,
-  type MRT_RowData,
-  type MRT_TableInstance,
+import type {
+  MRT_ColumnHelper,
+  MRT_DisplayColumnDef,
+  MRT_GroupColumnDef,
+  MRT_Row,
+  MRT_RowData,
+  MRT_TableInstance,
 } from '../types';
 import { getAllLeafColumnDefs, getColumnId } from './column.utils';
 

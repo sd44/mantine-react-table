@@ -1,31 +1,27 @@
-import clsx from 'clsx';
-
-import classes from './MRT_TableBodyRow.module.css';
-
-import { type DragEvent, memo, useMemo, useRef } from 'react';
-
 import {
   Box,
   type TableProps,
   TableTr,
   type TableTrProps,
 } from '@mantine/core';
+import clsx from 'clsx';
 
-import { Memo_MRT_TableBodyCell, MRT_TableBodyCell } from './MRT_TableBodyCell';
-import { MRT_TableDetailPanel } from './MRT_TableDetailPanel';
-
-import {
-  type MRT_Cell,
-  type MRT_ColumnVirtualizer,
-  type MRT_DensityState,
-  type MRT_Row,
-  type MRT_RowData,
-  type MRT_RowVirtualizer,
-  type MRT_TableInstance,
-  type MRT_VirtualItem,
+import { type DragEvent, memo, type RefObject, useMemo, useRef } from 'react';
+import type {
+  MRT_Cell,
+  MRT_ColumnVirtualizer,
+  MRT_DensityState,
+  MRT_Row,
+  MRT_RowData,
+  MRT_RowVirtualizer,
+  MRT_TableInstance,
+  MRT_VirtualItem,
 } from '../../types';
 import { getIsRowSelected } from '../../utils/row.utils';
 import { parseFromValuesOrFunc } from '../../utils/utils';
+import { Memo_MRT_TableBodyCell, MRT_TableBodyCell } from './MRT_TableBodyCell';
+import classes from './MRT_TableBodyRow.module.css';
+import { MRT_TableDetailPanel } from './MRT_TableDetailPanel';
 
 interface Props<TData extends MRT_RowData> extends TableTrProps {
   columnVirtualizer?: MRT_ColumnVirtualizer;
@@ -219,7 +215,7 @@ export const MRT_TableBodyRow = <TData extends MRT_RowData>({
                   numRows,
                   renderedColumnIndex,
                   renderedRowIndex,
-                  rowRef,
+                  rowRef: rowRef as RefObject<HTMLTableRowElement>,
                   table,
                   virtualCell: columnVirtualizer
                     ? (cellOrVirtualCell as MRT_VirtualItem)
@@ -243,7 +239,7 @@ export const MRT_TableBodyRow = <TData extends MRT_RowData>({
       </TableTr>
       {renderDetailPanel && !row.getIsGrouped() && (
         <MRT_TableDetailPanel
-          parentRowRef={rowRef}
+          parentRowRef={rowRef as RefObject<HTMLTableRowElement>}
           renderedRowIndex={renderedRowIndex}
           row={row}
           rowVirtualizer={rowVirtualizer}

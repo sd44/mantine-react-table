@@ -3,22 +3,22 @@ import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css'; //if using mantine date picker features
 import '@mantine/code-highlight/styles.css';
 import 'mantine-react-table/styles.css';
-import { useState } from 'react';
-import { type AppProps } from 'next/app';
-import Head from 'next/head';
-import PlausibleProvider from 'next-plausible';
-import { useRouter } from 'next/router';
-import { MDXProvider } from '@mdx-js/react';
 import { AppShell } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { MDXProvider } from '@mdx-js/react';
+import PlausibleProvider from 'next-plausible';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { mdxComponents } from '../components/mdx/mdxComponents';
-import { ThemeContextProvider } from '../styles/ThemeContext';
-import { TopBar } from '../components/navigation/TopBar';
-import { SideBar } from '../components/navigation/Sidebar';
-import { BreadCrumbs } from '../components/navigation/BreadCrumbs';
-import { MiniNav } from '../components/navigation/MiniNav';
-import { Footer } from '../components/navigation/Footer';
 import { SuggestsEditsButton } from '../components/mdx/SuggestsEditsButton';
+import { BreadCrumbs } from '../components/navigation/BreadCrumbs';
+import { Footer } from '../components/navigation/Footer';
+import { MiniNav } from '../components/navigation/MiniNav';
+import { SideBar } from '../components/navigation/Sidebar';
+import { TopBar } from '../components/navigation/TopBar';
+import { ThemeContextProvider } from '../styles/ThemeContext';
 
 function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();

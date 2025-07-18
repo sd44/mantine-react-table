@@ -56,7 +56,7 @@ const HomePage = () => {
       </Title>
       <StatBadges />
       <Box className={classes.buttonSection}>
-        <Link href="/docs/getting-started/install" passHref>
+        <Link href="/docs/getting-started/install" passHref legacyBehavior>
           <Button
             rightSection={<IconChevronRight />}
             fullWidth
@@ -67,7 +67,7 @@ const HomePage = () => {
             Get Started
           </Button>
         </Link>
-        <Link href="/docs/api" passHref>
+        <Link href="/docs/api" passHref legacyBehavior>
           <Button
             rightSection={<IconChevronRight />}
             fullWidth
@@ -77,7 +77,7 @@ const HomePage = () => {
             API
           </Button>
         </Link>
-        <Link href="/docs/examples" passHref>
+        <Link href="/docs/examples" passHref legacyBehavior>
           <Button
             rightSection={<IconChevronRight />}
             fullWidth
@@ -87,7 +87,7 @@ const HomePage = () => {
             Examples
           </Button>
         </Link>
-        <Link href="/docs/guides" passHref>
+        <Link href="/docs/guides" passHref legacyBehavior>
           <Button
             rightSection={<IconChevronRight />}
             fullWidth
@@ -106,42 +106,42 @@ const HomePage = () => {
         Popular Docs
       </Title>
       <Box className={classes.buttonSection}>
-        <Link href="/docs/getting-started/usage">
+        <Link href="/docs/getting-started/usage" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Usage
           </Button>
         </Link>
-        <Link href="/docs/api/table-options">
+        <Link href="/docs/api/table-options" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Table Options
           </Button>
         </Link>
-        <Link href="/docs/examples/editing-crud">
+        <Link href="/docs/examples/editing-crud" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             CRUD Examples
           </Button>
         </Link>
-        <Link href="/docs/examples/react-query">
+        <Link href="/docs/examples/react-query" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Fetching Examples
           </Button>
         </Link>
-        <Link href="/docs/guides/localization">
+        <Link href="/docs/guides/localization" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Localization
           </Button>
         </Link>
-        <Link href="/docs/guides/data-columns">
+        <Link href="/docs/guides/data-columns" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Create Columns
           </Button>
         </Link>
-        <Link href="/docs/guides/column-filtering">
+        <Link href="/docs/guides/column-filtering" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Column Filtering
           </Button>
         </Link>
-        <Link href="/docs/guides/row-selection">
+        <Link href="/docs/guides/row-selection" legacyBehavior>
           <Button size="xl" fullWidth variant="gradient">
             Row Selection
           </Button>

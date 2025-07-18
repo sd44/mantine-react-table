@@ -1,7 +1,6 @@
-import { MantineReactTable, type MRT_ColumnDef } from '../../src';
-
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react-vite';
+import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 
 const meta: Meta = {
   title: 'Styling/Style Table Body Cells',

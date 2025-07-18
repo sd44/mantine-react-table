@@ -25,7 +25,7 @@ const RemoteFetching = ({ isPage = false }) => {
           <Tabs.List>
             <Tabs.Tab value="export-csv">CSV</Tabs.Tab>
             <Tabs.Tab value="export-pdf">PDF</Tabs.Tab>
-            <Link href="/docs/examples">
+            <Link href="/docs/examples" legacyBehavior>
               <Tabs.Tab value="more">
                 More Examples <IconExternalLink size="1rem" />
               </Tabs.Tab>

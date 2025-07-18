@@ -1,11 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
-import { MantineReactTable, type MRT_ColumnDef } from 'mantine-react-table';
+import { InlineCodeHighlight } from '@mantine/code-highlight';
 import { Anchor, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import {
+  getPrimaryColor,
+  MantineReactTable,
+  type MRT_ColumnDef,
+} from 'mantine-react-table';
+import Link from 'next/link';
+import { isValidElement, useEffect, useMemo, useState } from 'react';
 import { type ColumnOption, columnOptions } from './columnOptions';
-import { getPrimaryColor } from 'mantine-react-table';
-import { InlineCodeHighlight } from '@mantine/code-highlight';
 
 interface Props {
   onlyOptions?: Set<keyof MRT_ColumnDef<ColumnOption>>;
@@ -33,7 +36,9 @@ const ColumnOptionsTable = ({ onlyOptions }: Props) => {
                   color: getPrimaryColor(theme),
                 })}
               >
-                {renderedCellValue}*
+                {isValidElement(renderedCellValue)
+                  ? renderedCellValue
+                  : `${renderedCellValue}*`}
               </Text>
             ) : (
               renderedCellValue

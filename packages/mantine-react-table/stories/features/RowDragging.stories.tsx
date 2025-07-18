@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 
 const meta: Meta = {
   title: 'Features/Row Dragging Examples',

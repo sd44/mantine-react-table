@@ -1,4 +1,5 @@
 import {
+  type Icon,
   IconArrowAutofitContent,
   IconArrowsSort,
   IconBaselineDensityLarge,
@@ -34,7 +35,7 @@ import {
   IconX,
 } from '@tabler/icons-react';
 
-export const MRT_Default_Icons = {
+export const MRT_Default_Icons: Record<string, Icon> = {
   IconArrowAutofitContent,
   IconArrowsSort,
   IconBaselineDensityLarge,
@@ -70,4 +71,4 @@ export const MRT_Default_Icons = {
   IconX,
 } as const;
 
-export type MRT_Icons = Record<keyof typeof MRT_Default_Icons, any>;
+export type MRT_Icons = typeof MRT_Default_Icons;

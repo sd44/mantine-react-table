@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
-import { Box, Anchor, Text, useMantineColorScheme } from '@mantine/core';
+import { Anchor, Box, Text, useMantineColorScheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import classes from './MiniNav.module.css';
 
 export const MiniNav = () => {
   const { pathname } = useRouter();
@@ -51,15 +52,7 @@ export const MiniNav = () => {
                         : 0,
               }}
             >
-              <Anchor
-                href={`#${heading.id}`}
-                style={(theme) => ({
-                  color:
-                    colorScheme === 'dark'
-                      ? theme.colors.gray[3]
-                      : theme.colors.gray[7],
-                })}
-              >
+              <Anchor href={`#${heading.id}`} className={classes.anchorScheme}>
                 <Text td="underline" component="span">
                   {heading.innerText}
                 </Text>
