@@ -13,7 +13,7 @@ import { MRT_Localization_EN } from '../../src/locales/en';
 import { MRT_Localization_JA } from '../../src/locales/ja';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 import dayjs from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween';
 import localizedFormat from 'dayjs/plugin/localizedFormat';

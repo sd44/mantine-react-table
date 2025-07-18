@@ -6,7 +6,7 @@ import {
   useMantineReactTable,
 } from '../../src';
 
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 
 const meta: Meta = {
   title: 'Fixed Bugs/Cell Alignment',

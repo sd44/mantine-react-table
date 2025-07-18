@@ -5,7 +5,7 @@ import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 import { getPrimaryColor } from '../../src/utils/style.utils';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 
 const meta: Meta = {
   title: 'Styling/Style Table Head Cells',

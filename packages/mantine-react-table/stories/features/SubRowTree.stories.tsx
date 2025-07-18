@@ -5,7 +5,7 @@ import { MantineReactTable, type MRT_ColumnDef } from '../../src';
 import { MRT_Localization_HE } from '../../src/locales/he';
 
 import { faker } from '@faker-js/faker';
-import { type Meta } from '@storybook/react';
+import { type Meta } from '@storybook/react-vite';
 
 const meta: Meta = {
   title: 'Features/Sub Row Tree Examples',
