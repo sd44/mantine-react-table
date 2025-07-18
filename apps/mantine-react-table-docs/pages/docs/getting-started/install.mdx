@@ -9,7 +9,7 @@ import { IconInfoCircle } from '@tabler/icons-react';
   <meta name="description" content="How to install Mantine React Table" />
 </Head>
 
-> This is the install guide for `mantine-react-table` **V2** and `@mantine/` packages **V7**. MRT V2 will not work with Mantine V6.
+> This is the install guide for `mantine-react-table` **V2** and `@mantine/` packages **V8**. MRT V2 will not work with Mantine V6.
 
 <Alert variant="light" color="orange" icon={<IconInfoCircle />}>
   Mantine React Table V2 is still a work in progress, but we are making good
@@ -18,29 +18,29 @@ import { IconInfoCircle } from '@tabler/icons-react';
 
 ## Installation
 
-> `mantine-react-table` V2 requires **Mantine V7.3+** packages as dependencies in your project.
+> `mantine-react-table` V2 requires **Mantine V8.1+** packages as dependencies in your project.
 >
 > If you are already using Mantine, you probably already have most of these peer dependencies installed.
 >
 > Just double-check that you have the following in your package.json, or use the [full install commands](<#install-with-required-peer-dependencies-(recommended)>) below.
 >
-> 1.  `@mantine/core` (^v7.3+)
-> 2.  `@mantine/hooks` (^v7.3+)
-> 3.  `@mantine/dates` (^v7.3+)
-> 4.  `@tabler/icons-react` (2.23.0+)
+> 1.  `@mantine/core` (^v8.1+)
+> 2.  `@mantine/hooks` (^v8.1+)
+> 3.  `@mantine/dates` (^v8.1+)
+> 4.  `@tabler/icons-react` (3.34.0+)
 > 5.  `dayjs` (v1.11+)
 > 6.  `clsx` (v2+)
-> 7.  `react` and `react-dom` (v18)
+> 7.  `react` and `react-dom` (v19)
 
 ### Quick Install
 
-The Quick Install instructions here assume you already have Mantine V7 installed and correctly configured with postcss in your project.
+The Quick Install instructions here assume you already have Mantine V8 installed and correctly configured with postcss in your project.
 
 <InstallCommand packagesString="mantine-react-table@beta" />
 
 ### Install With Required Peer Dependencies (Recommended)
 
-It is best to refer to the [Mantine V7 installation guide](https://mantine.dev/getting-started/) for the most up-to-date instructions on how to install Mantine V7 for your specific React meta framework. (Next.js, Remix, Vite, etc.)
+It is best to refer to the [Mantine V8 installation guide](https://mantine.dev/getting-started/) for the most up-to-date instructions on how to install Mantine V8 for your specific React meta framework. (Next.js, Remix, Vite, etc.)
 
 #### Install Mantine React Table with Mantine required peer dependencies:
 
@@ -53,7 +53,7 @@ It is best to refer to the [Mantine V7 installation guide](https://mantine.dev/g
 
 #### Install PostCSS dev dependencies (Optional)
 
-If you are using Mantine V7, it is common to use CSS modules for advanced custom styling. You may want to install and configure PostCSS like down below, but it is not required if you are using a different styling solution.
+If you are using Mantine V8, it is common to use CSS modules for advanced custom styling. You may want to install and configure PostCSS like down below, but it is not required if you are using a different styling solution.
 
 <InstallCommand packagesString="-D postcss postcss-preset-mantine postcss-simple-vars" />
 <br />
@@ -81,7 +81,7 @@ module.exports = {
 
 ### Setup Mantine Theme
 
-The [Mantine V7 installation guide](https://mantine.dev/getting-started/) has much better instructions for how to set up your Mantine theme, but you should have something like this in your project:
+The [Mantine V8 installation guide](https://mantine.dev/getting-started/) has much better instructions for how to set up your Mantine theme, but you should have something like this in your project:
 
 ```tsx
 import { MantineProvider, createTheme } from '@mantine/core';
@@ -104,7 +104,7 @@ function Demo() {
 After you install mantine-react-table, you will need to import the CSS styles from `mantine-react-table/styles.css` at the root of your project. (Where you import your other Mantine CSS styles.)
 
 ```js
-import '@mantine/core/styles.css'; //import Mantine V7 styles needed by MRT
+import '@mantine/core/styles.css'; //import Mantine V8 styles needed by MRT
 import '@mantine/dates/styles.css'; //if using mantine date picker features
 import 'mantine-react-table/styles.css'; //import MRT styles
 ```
@@ -157,7 +157,7 @@ Then try upgrading either `webpack` or `react-scripts` to the latest versions.
       },
       {
         '@type': 'Question',
-        name: 'Does Mantine V7 Work with Mantine React Table?',
+        name: 'Does Mantine V8 Work with Mantine React Table?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Eventually. MRT v2 will be completely rewritten to use Mantine v7. This should be available by the end of 2023.',
