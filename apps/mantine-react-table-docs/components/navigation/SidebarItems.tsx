@@ -1,16 +1,16 @@
-import { Fragment, useCallback } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 import {
-  UnstyledButton,
   Flex,
   rgba,
+  UnstyledButton,
   useMantineColorScheme,
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconExternalLink } from '@tabler/icons-react';
-import { type RouteItem } from './routes';
 import { getPrimaryColor } from 'mantine-react-table';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Fragment, useCallback } from 'react';
+import { type RouteItem } from './routes';
 
 interface Props {
   depth?: number;
@@ -40,13 +40,12 @@ export const SideBarItems = ({ depth = 1, routes, setNavOpen }: Props) => {
         const secondaryHrefs = secondaryItems?.map((i) => i.href);
         return (
           <Fragment key={label}>
-            <Link href={href ?? ''} passHref legacyBehavior>
-              <a
-                style={{ display: 'grid' }}
-                target={external ? '_blank' : undefined}
-                rel={external ? 'noopener noreferrer' : undefined}
-              >
-                <UnstyledButton
+            <Link
+              href={href}
+              style={{ display: 'grid' }}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}>
+              <UnstyledButton
                   ref={(node) =>
                     selectedItemRef(
                       node,
@@ -93,7 +92,6 @@ export const SideBarItems = ({ depth = 1, routes, setNavOpen }: Props) => {
                     )}
                   </Flex>
                 </UnstyledButton>
-              </a>
             </Link>
             {items && (
               <SideBarItems

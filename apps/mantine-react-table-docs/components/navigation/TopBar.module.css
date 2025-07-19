@@ -1,0 +1,56 @@
+.iconDark {
+  @mixin dark {
+    display: none;
+  }
+
+  @mixin light {
+    display: block;
+  }
+}
+
+.iconLight {
+  @mixin light {
+    display: none;
+  }
+
+  @mixin dark {
+    display: block;
+  }
+}
+
+
+
+.appShellHeader {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 20px;
+  z-index: 101;
+  opacity: 0.97;
+  background-color: var(--header-bg);
+}
+
+/*
+  The following variables were originally dynamic based on JavaScript
+  (e.g., `theme.colors[theme.primaryColor][8]`).
+  In a static module.css file, you need to provide concrete values.
+  Below is an example using a placeholder primary color.
+*/
+.mrt-docs-root {
+  --docsearch-primary-color: #2563eb; /* Example: A primary blue color */
+  --docsearch-highlight-color: #2563eb; /* Example: A primary blue color */
+  --docsearch-logo-color: #2563eb; /* Example: A primary blue color */
+
+  @mixin dark {
+  --docsearch-container-background: rgba(11, 11, 11, 0.8);
+  --docsearch-footer-background: #222;
+  --docsearch-hit-background: #333;
+  --docsearch-hit-color: #fff;
+  --docsearch-hit-shadow: none;
+  --docsearch-modal-background: #222;
+  --docsearch-modal-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  --docsearch-searchbox-background: #000;
+  --docsearch-searchbox-focus-background: #000;
+  --docsearch-text-color: #fff;
+  }
+}

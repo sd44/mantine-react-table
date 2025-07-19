@@ -1,5 +1,5 @@
 import '@docsearch/css';
-import docsearch from '@docsearch/js';
+import { DocSearch } from '@docsearch/react';
 import {
   ActionIcon,
   AppShell,
@@ -9,6 +9,7 @@ import {
   Select,
   Text,
   Tooltip,
+  useComputedColorScheme,
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
@@ -16,15 +17,18 @@ import { useMediaQuery } from '@mantine/hooks';
 import {
   IconBrandDiscord,
   IconBrandGithub,
+  IconMoon,
   IconMoonStars,
   IconSun,
 } from '@tabler/icons-react';
+import cx from 'clsx';
 import { getPrimaryColor } from 'mantine-react-table';
+import { usePlausible } from 'next-plausible';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { usePlausible } from 'next-plausible';
 import { useEffect } from 'react';
+import classes from './TopBar.module.css';
 
 interface Props {
   navOpen: boolean;
@@ -41,33 +45,15 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   const isLightTheme = colorScheme === 'light';
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      docsearch({
-        appId: 'GA9W0E15I8',
-        apiKey: 'd1d8da70283d84d7669881d993eff727',
-        indexName: 'mantine-react-table',
-        container: '#docsearch',
-      });
-    }
-  }, []);
+  const computedColorScheme = useComputedColorScheme(
+    isLightTheme ? 'light' : 'dark',
+    { getInitialValueInEffect: true },
+  );
 
   return (
     <>
-      <style jsx global>{`
-        .app-shell-header {
-          align-content: center;
-          display: flex;
-          justify-content: space-between;
-          padding: 4px 20px;
-          z-index: 101;
-          opacity: 0.97;
-          --app-shell-header-z-index: 100;
-          background-color: var(--header-bg);
-        }
-      `}</style>
-      <AppShell.Header className="app-shell-header">
+      <AppShell.Header className={classes.appShellHeader}>
+
         <Flex align="center" gap="md">
           {(!isDesktop || pathname === '/') && (
             <Burger
@@ -77,7 +63,7 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
               title="Open nav menu"
             />
           )}
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref>
             <Text
               c="white"
               style={{
@@ -115,6 +101,7 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
             maw="60px"
           />
         </Flex>
+
         <Box
           onClick={() => plausible('open-search')}
           id="docsearch"
@@ -123,7 +110,14 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
             width: isDesktop ? '400px' : !isTablet ? '250px' : undefined,
             alignItems: 'center',
           }}
-        />
+          className={classes['mrt-docs-root']}
+        >
+          <DocSearch
+            appId="GA9W0E15I8"
+            apiKey="d1d8da70283d84d7669881d993eff727"
+            indexName="mantine-react-table"
+          />
+        </Box>
         <Box
           style={{
             display: 'flex',
@@ -170,11 +164,14 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
               onClick={toggleColorScheme}
               size={isMobile ? 'sm' : 'lg'}
             >
-              {colorScheme === 'dark' ? (
-                <IconSun className="tabler-icon tabler-icon-sun" />
-              ) : (
-                <IconMoonStars className="tabler-icon tabler-icon-moon-stars" />
-              )}
+              <IconSun
+                className={cx( classes.iconLight)}
+                stroke={1.5}
+              />
+              <IconMoon
+                className={cx( classes.iconDark)}
+                stroke={1.5}
+              />
             </ActionIcon>
           </Tooltip>
         </Box>

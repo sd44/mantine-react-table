@@ -1,15 +1,14 @@
 import '@mantine/code-highlight/styles.css';
-import { AppShell, MantineProvider } from '@mantine/core';
+import { AppShell } from '@mantine/core';
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css'; //if using mantine date picker features
 import { useMediaQuery } from '@mantine/hooks';
 import { MDXProvider } from '@mdx-js/react';
-import { getPrimaryColor } from 'mantine-react-table';
 import 'mantine-react-table/styles.css';
+import PlausibleProvider from 'next-plausible';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import PlausibleProvider from 'next-plausible';
 import { useState } from 'react';
 import { mdxComponents } from '../components/mdx/mdxComponents';
 import { SuggestsEditsButton } from '../components/mdx/SuggestsEditsButton';
@@ -76,22 +75,6 @@ function App({ Component, pageProps }: AppProps) {
         enabled={process.env.NODE_ENV === 'production'}
       >
         <ThemeContextProvider>
-          <MantineProvider
-            theme={{
-              components: {
-                AppShell: {
-                  styles: {
-                    header: (theme) => ({
-                      '--header-bg':
-                        theme.colorScheme === 'dark'
-                          ? theme.colors.dark[7]
-                          : getPrimaryColor(theme, 8),
-                    }),
-                  },
-                },
-              },
-            }}
-          >
             <MDXProvider components={mdxComponents}>
               <AppShell
                 header={{ height: 55 }}
@@ -131,7 +114,6 @@ function App({ Component, pageProps }: AppProps) {
                 {showMiniNav && isXLDesktop && <MiniNav />}
               </AppShell>
             </MDXProvider>
-          </MantineProvider>
         </ThemeContextProvider>
       </PlausibleProvider>
     </>
