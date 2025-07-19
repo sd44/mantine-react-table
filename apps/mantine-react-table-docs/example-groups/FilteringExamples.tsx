@@ -33,7 +33,7 @@ const FilteringExamples = ({ isPage = false }) => {
             <Tabs.Tab value="filter-switching">Filter Switching</Tabs.Tab>
             <Tabs.Tab value="popover-filters">Popover Filters</Tabs.Tab>
             <Tabs.Tab value="custom-filter-ui">Custom Filter UI</Tabs.Tab>
-            <Link href="/docs/examples/react-query">
+            <Link href="/docs/examples/react-query" legacyBehavior>
               <Tabs.Tab value="more">
                 Server-Side Filtering <IconExternalLink size="1rem" />
               </Tabs.Tab>

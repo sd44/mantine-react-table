@@ -33,7 +33,7 @@ const BasicExamples = ({ isPage = false }) => {
               Aggregation and Grouping
             </Tabs.Tab>
             <Tabs.Tab value="custom-headless">Custom Headless</Tabs.Tab>
-            <Link href="/docs/examples">
+            <Link href="/docs/examples" legacyBehavior>
               <Tabs.Tab value="more">
                 More Examples <IconExternalLink size="1rem" />
               </Tabs.Tab>
