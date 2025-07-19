@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { addons } from 'storybook/preview-api';
 import { Preview } from '@storybook/react-vite';
-import { useDarkMode, DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
+import {
+  useDarkMode,
+  DARK_MODE_EVENT_NAME,
+} from '@vueless/storybook-dark-mode';
 import {
   Anchor,
   ColorSchemeScript,
@@ -30,8 +33,8 @@ const preview: Preview = {
     },
 
     docs: {
-      codePanel: true
-    }
+      codePanel: true,
+    },
   },
   decorators: [
     (Story, context) => {

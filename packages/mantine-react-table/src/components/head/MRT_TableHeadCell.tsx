@@ -1,7 +1,6 @@
+import { Flex, TableTh, type TableThProps, useDirection } from '@mantine/core';
+import { useHover } from '@mantine/hooks';
 import clsx from 'clsx';
-
-import classes from './MRT_TableHeadCell.module.css';
-
 import {
   type CSSProperties,
   type DragEventHandler,
@@ -10,25 +9,21 @@ import {
   useMemo,
   useState,
 } from 'react';
-
-import { Flex, TableTh, type TableThProps, useDirection } from '@mantine/core';
-import { useHover } from '@mantine/hooks';
-
+import type {
+  MRT_ColumnVirtualizer,
+  MRT_Header,
+  MRT_RowData,
+  MRT_TableInstance,
+} from '../../types';
+import { parseCSSVarId } from '../../utils/style.utils';
+import { parseFromValuesOrFunc } from '../../utils/utils';
+import { MRT_ColumnActionMenu } from '../menus/MRT_ColumnActionMenu';
+import classes from './MRT_TableHeadCell.module.css';
 import { MRT_TableHeadCellFilterContainer } from './MRT_TableHeadCellFilterContainer';
 import { MRT_TableHeadCellFilterLabel } from './MRT_TableHeadCellFilterLabel';
 import { MRT_TableHeadCellGrabHandle } from './MRT_TableHeadCellGrabHandle';
 import { MRT_TableHeadCellResizeHandle } from './MRT_TableHeadCellResizeHandle';
 import { MRT_TableHeadCellSortLabel } from './MRT_TableHeadCellSortLabel';
-
-import {
-  type MRT_ColumnVirtualizer,
-  type MRT_Header,
-  type MRT_RowData,
-  type MRT_TableInstance,
-} from '../../types';
-import { parseCSSVarId } from '../../utils/style.utils';
-import { parseFromValuesOrFunc } from '../../utils/utils';
-import { MRT_ColumnActionMenu } from '../menus/MRT_ColumnActionMenu';
 
 interface Props<TData extends MRT_RowData> extends TableThProps {
   columnVirtualizer?: MRT_ColumnVirtualizer;
@@ -208,7 +203,7 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
         if (node) {
           tableHeadCellRefs.current[column.id] = node;
           (
-            isHoveredHeadCellRef as MutableRefObject<HTMLTableCellElement>
+            isHoveredHeadCellRef as unknown as MutableRefObject<HTMLTableCellElement>
           ).current = node;
           if (columnDefType !== 'group') {
             columnVirtualizer?.measureElement?.(node);

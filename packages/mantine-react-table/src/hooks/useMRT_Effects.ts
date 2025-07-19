@@ -1,9 +1,9 @@
 import { useEffect, useReducer, useRef } from 'react';
 
-import {
-  type MRT_RowData,
-  type MRT_SortingState,
-  type MRT_TableInstance,
+import type {
+  MRT_RowData,
+  MRT_SortingState,
+  MRT_TableInstance,
 } from '../types';
 import { getDefaultColumnOrderIds } from '../utils/displayColumn.utils';
 import { getCanRankRows } from '../utils/row.utils';
@@ -32,8 +32,8 @@ export const useMRT_Effects = <TData extends MRT_RowData>(
   const totalRowCount = rowCount ?? getPrePaginationRowModel().rows.length;
 
   const rerender = useReducer(() => ({}), {})[1];
-  const initialBodyHeight = useRef<string>();
-  const previousTop = useRef<number>();
+  const initialBodyHeight = useRef<string>('0');
+  const previousTop = useRef<number>(0);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
