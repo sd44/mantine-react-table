@@ -302,11 +302,11 @@ const queryClient = new QueryClient();
 
 const ExampleWithProviders = () => (
   //Put this with your other react-query providers near root of your app
-  (<QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={queryClient}>
     <ModalsProvider>
       <Example />
     </ModalsProvider>
-  </QueryClientProvider>)
+  </QueryClientProvider>
 );
 
 export default ExampleWithProviders;

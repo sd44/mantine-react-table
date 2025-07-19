@@ -125,14 +125,14 @@ importers:
         specifier: ^3.12.4
         version: 3.12.4(next@15.4.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       postcss:
-        specifier: ^8.4.47
-        version: 8.4.47
+        specifier: ^8.5.6
+        version: 8.5.6
       postcss-preset-mantine:
         specifier: ^1.18.0
-        version: 1.18.0(postcss@8.4.47)
+        version: 1.18.0(postcss@8.5.6)
       postcss-simple-vars:
         specifier: ^7.0.1
-        version: 7.0.1(postcss@8.4.47)
+        version: 7.0.1(postcss@8.5.6)
       raw-loader:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.99.9)
@@ -3893,10 +3893,6 @@ packages:
 
   postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.4.47:
-    resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.6:
@@ -8703,11 +8699,6 @@ snapshots:
     dependencies:
       postcss: 8.5.6
 
-  postcss-js@4.0.1(postcss@8.4.47):
-    dependencies:
-      camelcase-css: 2.0.1
-      postcss: 8.4.47
-
   postcss-js@4.0.1(postcss@8.5.6):
     dependencies:
       camelcase-css: 2.0.1
@@ -8758,14 +8749,6 @@ snapshots:
       postcss: 8.5.6
       postcss-selector-parser: 6.1.2
 
-  postcss-mixins@12.0.0(postcss@8.4.47):
-    dependencies:
-      postcss: 8.4.47
-      postcss-js: 4.0.1(postcss@8.4.47)
-      postcss-simple-vars: 7.0.1(postcss@8.4.47)
-      sugarss: 5.0.0(postcss@8.4.47)
-      tinyglobby: 0.2.14
-
   postcss-mixins@12.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -8806,11 +8789,6 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.6)
       postcss-modules-values: 4.0.0(postcss@8.5.6)
       string-hash: 1.1.3
-
-  postcss-nested@7.0.2(postcss@8.4.47):
-    dependencies:
-      postcss: 8.4.47
-      postcss-selector-parser: 7.1.0
 
   postcss-nested@7.0.2(postcss@8.5.6):
     dependencies:
@@ -8869,12 +8847,6 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
 
-  postcss-preset-mantine@1.18.0(postcss@8.4.47):
-    dependencies:
-      postcss: 8.4.47
-      postcss-mixins: 12.0.0(postcss@8.4.47)
-      postcss-nested: 7.0.2(postcss@8.4.47)
-
   postcss-preset-mantine@1.18.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -8902,10 +8874,6 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-simple-vars@7.0.1(postcss@8.4.47):
-    dependencies:
-      postcss: 8.4.47
-
   postcss-simple-vars@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -8924,12 +8892,6 @@ snapshots:
   postcss-value-parser@4.2.0: {}
 
   postcss@8.4.31:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.4.47:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -9606,10 +9568,6 @@ snapshots:
       source-map: 0.7.4
     transitivePeerDependencies:
       - supports-color
-
-  sugarss@5.0.0(postcss@8.4.47):
-    dependencies:
-      postcss: 8.4.47
 
   sugarss@5.0.0(postcss@8.5.6):
     dependencies:
