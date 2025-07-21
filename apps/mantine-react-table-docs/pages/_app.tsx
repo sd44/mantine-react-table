@@ -1,9 +1,9 @@
 import '@mantine/code-highlight/styles.css';
-import { AppShell } from '@mantine/core';
+import { AppShell, AppShell } from '@mantine/core';
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css'; //if using mantine date picker features
-import { useMediaQuery } from '@mantine/hooks';
-import { MDXProvider } from '@mdx-js/react';
+import { useMediaQuery, useMediaQuery } from '@mantine/hooks';
+import { MDXProvider, MDXProvider } from '@mdx-js/react';
 import 'mantine-react-table/styles.css';
 import PlausibleProvider from 'next-plausible';
 import type { AppProps } from 'next/app';
@@ -17,7 +17,6 @@ import { Footer } from '../components/navigation/Footer';
 import { MiniNav } from '../components/navigation/MiniNav';
 import { SideBar } from '../components/navigation/Sidebar';
 import { TopBar } from '../components/navigation/TopBar';
-import '../styles/globals.css';
 import { ThemeContextProvider } from '../styles/ThemeContext';
 
 function App({ Component, pageProps }: AppProps) {

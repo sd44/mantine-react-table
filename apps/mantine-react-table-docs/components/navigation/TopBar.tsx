@@ -52,8 +52,7 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
 
   return (
     <>
-      <AppShell.Header className={classes.appShellHeader}>
-
+      <AppShell.Header className={classes['app-shell-header']}>
         <Flex align="center" gap="md">
           {(!isDesktop || pathname === '/') && (
             <Burger
@@ -164,14 +163,8 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
               onClick={toggleColorScheme}
               size={isMobile ? 'sm' : 'lg'}
             >
-              <IconSun
-                className={cx( classes.iconLight)}
-                stroke={1.5}
-              />
-              <IconMoon
-                className={cx( classes.iconDark)}
-                stroke={1.5}
-              />
+              <IconSun className={cx(classes.iconLight)} stroke={1.5} />
+              <IconMoon className={cx(classes.iconDark)} stroke={1.5} />
             </ActionIcon>
           </Tooltip>
         </Box>

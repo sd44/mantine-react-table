@@ -1,0 +1,9 @@
+.anchorScheme {
+  @mixin light { 
+    color: var(--mantine-color-gray-7);
+}
+
+  @mixin dark { 
+    color: var(--mantine-color-gray-7);
+}
+}

@@ -1,5 +1,6 @@
 {
   "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.1",
   "license": "MIT",
   "name": "mantine-react-table",
   "description": "A fully featured Mantine implementation of TanStack React Table V8, written from the ground up in TypeScript.",
@@ -110,6 +111,10 @@
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
     "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-is": "^19.1.0",
+    "rollup": "^4.45.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-is": "^19.1.0",
